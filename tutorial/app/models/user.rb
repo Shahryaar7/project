@@ -10,6 +10,8 @@ class User < ApplicationRecord
             length: { minimum: 4, maximum: 254 },
             format: { with: EMAIL_REGEX , message: "Invalid Email format" }
 
+  validates_inclusion_of :age, :in=>Date.new(1900)..Time.now.years_ago(18).to_date
+
   scope :by_name, ->(letters) { where("name ILIKE ?","%#{letters}%") }
 
 

@@ -3,4 +3,6 @@ class UserRole < ApplicationRecord
   belongs_to :cafe_restaurant
 
   enum :role_type, { admin: "admin", chef: "chef", waiter: "waiter" }
+
+  scope :active, ->{ where(active: true) }
 end

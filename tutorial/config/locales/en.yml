@@ -29,5 +29,13 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
+# I18n.t('models.users.email.format_validation')
+
 en:
   hello: "Hello world"
+  models:
+    users:
+      email:
+        format_validation: 'Invalid Email format'
+
+
